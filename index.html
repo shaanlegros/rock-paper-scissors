@@ -14,15 +14,26 @@
 
     console.log("Rock, Paper, Scissors, Shoot!");
     console.log("Player: " + playerSelection + " vs. Computer: " + computerSelection);
-    function playRoud(playerSelection, computerSelection) {
-        
+    function playRound(playerSelection, computerSelection) {
+        if (playerSelection == computerSelection) {
+          console.log("Tie!"); }
+        else if (playerSelection == "ROCK" && computerSelection == "SCISSORS") {
+          console.log("Player wins!");
+        } 
+        else if (playerSelection == "PAPER" && computerSelection == "ROCK") {
+          console.log("Player wins!");
+        }
+        else if (playerSelection == "SCISSORS" && computerSelection == "PAPER") {
+          console.log("Player wins!");
+        }
+        else {
+          console.log("You lose!");
+        }
     }
+    playRound(playerSelection, computerSelection);
     function game() {
 
     }
-
-    computerSelection = "rock"
-
 
   </script>
 </body>
