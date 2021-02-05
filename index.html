@@ -6,15 +6,11 @@
 </head>
 <body>
   <script>
-    playerSelection = prompt("Rock, Paper, or Scissors?").toUpperCase();
-    console.log("You chose: " + playerSelection);
-
-    let gameObjects = ["rock", "paper", "scissors"];
-    let computerSelection = gameObjects[Math.floor(Math.random()*gameObjects.length)].toUpperCase();
-
-    console.log("Rock, Paper, Scissors, Shoot!");
-    console.log("Player: " + playerSelection + " vs. Computer: " + computerSelection);
+    
     function playRound(playerSelection, computerSelection) {
+      
+      
+      
         if (playerSelection == computerSelection) {
           console.log("Tie!"); }
         else if (playerSelection == "ROCK" && computerSelection == "SCISSORS") {
@@ -30,11 +26,23 @@
           console.log("You lose!");
         }
     }
-    playRound(playerSelection, computerSelection);
     function game() {
+      for (let i = 1; i <= 5; i++) {
+        console.log("Round: " + i);
 
+        playerSelection = prompt("Rock, Paper, or Scissors?").toUpperCase();
+        console.log("You chose: " + playerSelection);
+
+        let gameObjects = ["rock", "paper", "scissors"];
+        let computerSelection = gameObjects[Math.floor(Math.random()*gameObjects.length)].toUpperCase();
+
+        console.log("Rock, Paper, Scissors, Shoot!");
+        console.log("Player: " + playerSelection + " vs. Computer: " + computerSelection);
+
+        playRound(playerSelection, computerSelection);
+      }
     }
-
+    game();
   </script>
 </body>
 </html>
