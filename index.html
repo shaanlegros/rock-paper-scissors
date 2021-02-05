@@ -6,17 +6,24 @@
 </head>
 <body>
   <script>
-    // Your JavaScript goes here!
-    function computerPlay() {
+    playerSelection = prompt("Rock, Paper, or Scissors?").toUpperCase();
+    console.log("You chose: " + playerSelection);
 
-    }
+    let gameObjects = ["rock", "paper", "scissors"];
+    let computerSelection = gameObjects[Math.floor(Math.random()*gameObjects.length)].toUpperCase();
+
+    console.log("Rock, Paper, Scissors, Shoot!");
+    console.log("Player: " + playerSelection + " vs. Computer: " + computerSelection);
     function playRoud(playerSelection, computerSelection) {
         
     }
     function game() {
 
     }
-    playerSelection = prompt("Rock, Paper, or Scissors?");
+
+    computerSelection = "rock"
+
+
   </script>
 </body>
 </html>
